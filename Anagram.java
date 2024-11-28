@@ -100,18 +100,18 @@ public class Anagram {
 	public static String randomAnagram(String str) {
 		// Replace the following statement with your code
 		String newstr = "";
-		double randnum = Math.random() * str.length();
+		double radnom = Math.random() * str.length();
 		for (int i = 0; i < str.length(); i++) {
-			if (str.charAt((int) randnum) != ' ') {
-				newstr += str.charAt((int) randnum);
-				str = str.replace(str.charAt((int) randnum), ' ');
+			if (str.charAt((int) radnom) != ' ') {
+				newstr += str.charAt((int) radnom);
+				str = str.replace(str.charAt((int) radnom), ' ');
 			} else {
-				while (str.charAt((int) randnum) == ' ') {
-					randnum = Math.random() * str.length();
+				while (str.charAt((int) radnom) == ' ') {
+					radnom = Math.random() * str.length();
 				}
-				newstr += str.charAt((int) randnum);
+				newstr += str.charAt((int) radnom);
 			}
-			randnum = Math.random() * str.length();
+			radnom = Math.random() * str.length();
 		}
 
 		return newstr;
